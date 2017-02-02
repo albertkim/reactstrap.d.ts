@@ -27,6 +27,86 @@ declare module 'reactstrap' {
 
   }
 
+  interface BaseCardProps {
+    tag?: Function | string
+    className?: string
+  }
+
+  interface CardProps extends BaseCardProps {
+    inverse?: boolean
+    color?: Colors
+    block?: boolean
+  }
+
+  export class Card extends React.Component<CardProps, void> {
+
+  }
+
+  export class CardBlock extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardColumns extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardDeck extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardFooter extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardGroup extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardHeader extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export interface CardImgProps extends BaseCardProps {
+    top?: boolean
+    bottom?: boolean
+  }
+
+  export class CardImg extends React.Component<CardImgProps, void> {
+
+  }
+
+  export class CardImgOverlay extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardLink extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardSubtitle extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardText extends React.Component<BaseCardProps, void> {
+
+  }
+
+  export class CardTitle extends React.Component<BaseCardProps, void> {
+
+  }
+  
+  interface CollapseProps extends React.HTMLProps<HTMLDivElement> {
+    isOpen: boolean
+    navbar?: boolean
+    delay?: number
+    onOpened?: Function
+    onClosed?: Function
+  }
+
+  export class Collapse extends React.Component<CollapseProps, void> {
+
+  }
+
   interface DropdownProps {
     disabled?: boolean
     dropup?: boolean
@@ -55,19 +135,24 @@ declare module 'reactstrap' {
     // Defaults to Button component
     tag?: any
     size?: string
-    
   }
   
   export class DropdownToggle extends React.Component<DropdownToggleProps, void> {
     
   }
 
-  export class DropdownMenu extends React.Component<void, void> {
+  interface DropdownMenuProps {
+    right?: any
+  }
+
+  export class DropdownMenu extends React.Component<DropdownMenuProps, void> {
     
   }
 
   interface DropdownItemProps {
     header?: any
+    disabled?: any
+    divider?: any
     onClick?: Function
   }
 
@@ -101,18 +186,6 @@ declare module 'reactstrap' {
   }
 
   export class ModalBody extends React.Component<React.HTMLProps<HTMLDivElement>, void> {
-
-  }
-
-  interface CollapseProps extends React.HTMLProps<HTMLDivElement> {
-    isOpen: boolean
-    navbar?: boolean
-    delay?: number
-    onOpened?: Function
-    onClosed?: Function
-  }
-
-  export class Collapse extends React.Component<CollapseProps, void> {
 
   }
 
