@@ -1,9 +1,8 @@
 declare module 'reactstrap' {
-  type Colors = 'default' | 'primary' | 'success' | 'info' | 'warning' | 'danger'
   
   interface AlertProps {
     className?: string
-    color?: Colors // default: 'success'
+    color?: string // default: 'success'
     isOpen?: boolean  // default: true
     toggle?: Function
     tag?: Function | string
@@ -20,7 +19,7 @@ declare module 'reactstrap' {
 
   interface BadgeProps {
     pill?: any
-    color?: Colors
+    color?: string
   }
 
   export class Badge extends React.Component<BadgeProps, void> {
@@ -34,7 +33,7 @@ declare module 'reactstrap' {
 
   interface CardProps extends BaseCardProps {
     inverse?: boolean
-    color?: Colors
+    color?: string
     block?: boolean
   }
 
@@ -94,6 +93,26 @@ declare module 'reactstrap' {
   export class CardTitle extends React.Component<BaseCardProps, void> {
 
   }
+
+  type ColumnTypes = string | number | boolean | {
+    size?: string
+    push?: string | number
+    pull?: string | number
+    offset?: string | number
+  }
+
+  interface ColProps {
+    xs?: ColumnTypes
+    sm?: ColumnTypes
+    md?: ColumnTypes
+    lg?: ColumnTypes
+    xl?: ColumnTypes
+    widths?: any[]
+  }
+
+  export class Col extends React.Component<ColProps, void> {
+
+  }
   
   interface CollapseProps extends React.HTMLProps<HTMLDivElement> {
     isOpen: boolean
@@ -104,6 +123,14 @@ declare module 'reactstrap' {
   }
 
   export class Collapse extends React.Component<CollapseProps, void> {
+
+  }
+
+  interface ContainerProps {
+    fluid?: any
+  }
+
+  export class Container extends React.Component<ContainerProps, void> {
 
   }
 
@@ -158,6 +185,95 @@ declare module 'reactstrap' {
 
   export class DropdownItem extends React.Component<DropdownItemProps, void> {
     
+  }
+
+  interface FormProps {
+    inline?: any
+  }
+
+  export class Form extends React.Component<FormProps, void> {
+
+  }
+
+  interface FormGroupProps {
+    row?: any
+    check?: any
+    disabled?: any
+    color?: string
+    tag?: Function | string
+  }
+
+  export class FormGroup extends React.Component<FormGroupProps, void> {
+
+  }
+
+  interface LabelProps {
+    for?: string
+  }
+
+  export class Label extends React.Component<LabelProps, void> {
+
+  }
+
+  interface InputProps {
+    type?: string
+    name?: string
+    id?: string
+    multiple?: any
+    placeholder?: string
+    state?: string
+  }
+
+  export class Input extends React.Component<InputProps, void> {
+
+  }
+
+  interface InputGroupProps {
+    tag?: Function | string
+    size?: string
+    className?: string
+  }
+
+  export class InputGroups extends React.Component<InputGroupProps, void> {
+
+  }
+
+  interface InputGroupAddOnProps {
+    tag?: Function | string
+    className?: string
+  }
+
+  export class InputGroupAddon extends React.Component<InputGroupAddOnProps, void> {
+
+  }
+
+  interface InputGroupButton {
+    tag?: Function | string
+    groupClassName?: string // only used in shorthand
+    groupAttributes?: any // only used in shorthand
+    className?: string
+  }
+
+  export class InputGroupButton extends React.Component<InputGroupButton, void> {
+
+  }
+
+  interface FormTextProps {
+    color?: string
+  }
+
+  export class FormText extends React.Component<FormTextProps, void> {
+
+  }
+
+  interface JumbotronProps {
+    tag?: Function | string
+    fluid?: boolean
+    className?: string
+  }
+
+  export class Jumbotron extends React.Component<JumbotronProps, void> {
+
   }
 
   interface ModalProps {
