@@ -276,6 +276,47 @@ declare module 'reactstrap' {
 
   }
 
+  export class ListGroup extends React.Component<void, void> {
+
+  }
+
+  interface ListGroupItemProps {
+    color?: string
+    disabled?: any
+    active?: any
+    action?: any
+    tag?: Function | string
+    to?: string // For react-router Link elements
+    href?: string
+  }
+
+  export class ListGroupItem extends React.Component<void, void> {
+
+  }
+
+  interface MediaProps {
+    body?: boolean
+    bottom?: boolean
+    children?: boolean
+    className?: string
+    heading?: boolean
+    left?: boolean
+    list?: boolean
+    middle?: boolean
+    object?: boolean
+    right?: boolean
+    tag?: Function | string
+    top?: boolean
+    href?: string
+    to?: string // For react-router Link elements
+    placeholder?: any
+    image?: any
+  }
+
+  export class Media extends React.Component<MediaProps, void> {
+
+  }
+
   interface ModalProps {
     isOpen:  boolean
     // boolean to control the state of the popover
@@ -367,10 +408,13 @@ declare module 'reactstrap' {
     disabled?: boolean
     active?: boolean
     tag?: Function | string
-    to?: string
+    to?: string // For react-router Link elements
   }
 
   export class NavLink extends React.Component<NavLinkProps, void> {
+
+  }
+  export class Row extends React.Component<void, void> {
 
   }
 }
