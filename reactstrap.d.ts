@@ -494,7 +494,96 @@ declare module 'reactstrap' {
     
   }
 
+  interface ProgressProps {
+    multi?: boolean
+    bar?: boolean
+    tag?: string // default 'progress'
+    value?: string | number // default 0
+    max?: string | number // default 100
+    animated?: boolean
+    striped?: boolean // Typo in docs says 'stripped', huehuehue
+    color?: string
+    className?: string
+  }
+
+  export class Progress extends React.Component<ProgressProps, void> {
+
+  }
+
   export class Row extends React.Component<void, void> {
+
+  }
+
+  interface TableProps {
+    tag?: Function | string
+    size?: string
+    bordered?: boolean
+    striped?: boolean
+    inverse?: boolean
+    hover?: boolean
+    reflow?: boolean
+    responsive?: boolean
+  }
+
+  export class Table extends React.Component<TableProps, void> {
+
+  }
+
+  interface TabContentProps extends React.HTMLProps<HTMLDivElement> {
+    activeTab?: number | string
+  }
+
+  export class TabContent extends React.Component<TabContentProps, void> {
+
+  }
+
+  interface TabPaneProps extends React.HTMLProps<HTMLDivElement> {
+    tabId?: number | string
+  }
+
+  export class TabPane extends React.Component<TabPaneProps, void> {
+    
+  }
+
+  interface TooltipProps {
+    isOpen?: boolean
+    // boolean to control the state of the tooltip
+    toggle?: Function
+    // callback for toggling isOpen in the controlling component
+    target?: string
+    // target div ID, popover is attached to this element
+    tether?: any | boolean
+    // optionally overide tether config http://tether.io/#options
+    tetherRef?: Function
+    // function which is passed a reference to the instance of tether for manually `position()`ing
+    delay?: {show?: number, hide?: number} | number
+    // optionally override show/hide delays - default { show: 0, hide: 250 }
+    autohide?: boolean
+    // optionally hide tooltip when hovering over tooltip content - default true
+    placement?:
+      'top' |
+      'bottom' |
+      'left' |
+      'right' |
+      'top left' |
+      'top center' |
+      'top right' |
+      'right top' |
+      'right middle' |
+      'right bottom' |
+      'bottom right' |
+      'bottom center' |
+      'bottom left' |
+      'left top' |
+      'left middle' |
+      'left bottom'
+  }
+
+  export class Tooltip extends React.Component<TooltipProps, void> {
+
+  }
+
+  export class UncontrolledTooltip extends React.Component<TooltipProps, void> {
 
   }
 }

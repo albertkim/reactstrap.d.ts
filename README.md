@@ -24,7 +24,13 @@ First pass (each component may not be 100% thorough):
 * Navs (done)
 * Pagination (done)
 * Popovers (done)
-* Progress (in progress)
-* Tables (in progress)
-* Tabs (in progress)
-* Tooltips (in progress)
+* Progress (done)
+* Tables (done)
+* Tabs (done)
+* Tooltips (done)
+
+Second pass (Ensure accuracy of each component, double check with source code):
+
+* In progress
+
+Please throw out suggestions, or even just let me know if this was helpful! Thanks!
