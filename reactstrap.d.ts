@@ -414,6 +414,86 @@ declare module 'reactstrap' {
   export class NavLink extends React.Component<NavLinkProps, void> {
 
   }
+
+  interface PaginationProps {
+    size?: string
+  }
+
+  export class Pagination extends React.Component<PaginationProps, void> {
+
+  }
+
+  interface PaginationItemProps {
+    active?: any
+    disabled?: any
+  }
+
+  export class PaginationItem {
+
+  }
+
+  interface PaginationLinkProps {
+    previous?: any
+    next?: any
+    href?: string
+    tag?: Function | string // TODO: Double check that this actually exists?
+    to?: string // For react-router Link elements
+  }
+
+  export class PaginationLink extends React.Component<PaginationLinkProps, void> {
+
+  }
+
+  interface PopoverProps extends React.HTMLProps<HTMLDivElement> {
+    isOpen?: boolean
+    // boolean to control the state of the popover
+    toggle?: Function
+    // callback for toggling isOpen in the controlling component
+    target:  string
+    // target div ID, popover is attached to this element
+    tether?: any
+    // optionally overide tether config http://tether.io/#options
+    tetherRef?: Function
+    // function which is passed a reference to the instance of tether for manually `position()`ing
+    placement?:
+      'top' |
+      'bottom' |
+      'left' |
+      'right' |
+      'top left' |
+      'top center' |
+      'top right' |
+      'right top' |
+      'right middle' |
+      'right bottom' |
+      'bottom right' |
+      'bottom center' |
+      'bottom left' |
+      'left top' |
+      'left middle' |
+      'left bottom'
+  }
+
+  export class Popover extends React.Component<PopoverProps, void> {
+    
+  }
+
+  interface PopoverTitleProps extends React.HTMLProps<HTMLDivElement> {
+
+  }
+
+  export class PopoverTitle extends React.Component<PopoverTitle, void> {
+
+  }
+
+  interface PopoverContentProps extends React.HTMLProps<HTMLDivElement> {
+
+  }
+
+  export class PopoverContent extends React.Component<PopoverContentProps, void> {
+    
+  }
+
   export class Row extends React.Component<void, void> {
 
   }
