@@ -17,6 +17,10 @@ declare module 'reactstrap' {
     
   }
 
+  export class UncontrolledAlert extends React.Component<AlertProps , void> {
+
+  }
+
   interface BadgeProps {
     pill?: any
     color?: string
@@ -149,6 +153,21 @@ declare module 'reactstrap' {
 
   }
 
+  interface UncontrolledDropdownProps {
+    disabled?: boolean
+    dropup?: boolean
+    group?: boolean
+    isOpen?: boolean
+    tag?: string // default: 'div'
+    tether?: any
+    toggle?: Function
+    caret?: any
+  }
+
+  export class UncontrolledDropdown extends React.Component<UncontrolledDropdownProps, void> {
+
+  }
+
   interface DropdownToggleProps {
     caret?: boolean
     color?: string
@@ -215,7 +234,7 @@ declare module 'reactstrap' {
 
   }
 
-  interface InputProps {
+  interface InputProps extends React.HTMLProps<HTMLInputElement> {
     type?: string
     name?: string
     id?: string
@@ -232,9 +251,10 @@ declare module 'reactstrap' {
     tag?: Function | string
     size?: string
     className?: string
+    style?: any
   }
 
-  export class InputGroups extends React.Component<InputGroupProps, void> {
+  export class InputGroup extends React.Component<InputGroupProps, void> {
 
   }
 
@@ -247,14 +267,14 @@ declare module 'reactstrap' {
 
   }
 
-  interface InputGroupButton {
+  interface InputGroupButtonProps {
     tag?: Function | string
     groupClassName?: string // only used in shorthand
     groupAttributes?: any // only used in shorthand
     className?: string
   }
 
-  export class InputGroupButton extends React.Component<InputGroupButton, void> {
+  export class InputGroupButton extends React.Component<InputGroupButtonProps, void> {
 
   }
 
